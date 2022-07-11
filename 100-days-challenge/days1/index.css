@@ -1,0 +1,40 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  background-color: green;
+}
+
+.one-one-part {
+  position: relative;
+
+  background-color: #fff;
+  width: 20px;
+  height: 40px;
+  transform: rotate(50deg);
+  left: -16px;
+  border-radius: 3px;
+}
+
+.one-two-part {
+  position: absolute;
+  background-color: #fff;
+  width: 24px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
