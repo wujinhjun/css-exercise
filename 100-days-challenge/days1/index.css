@@ -6,16 +6,27 @@
   width: 400px;
   height: 400px;
   background: linear-gradient(to top right, #43389f 0%, #4ec6ca 100%);
+  font-family: "Courier New", "Courier", sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 50.8%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  /* width: 200px; */
+  /* height: 100px; */
+  /* background-color: red; */
 }
 
 .text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   width: 200px;
   height: 100px;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .one-one-part {
@@ -27,6 +38,7 @@
   transform: rotate(50deg);
   left: -16px;
   border-radius: 3px;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
 }
 
 .one-two-part {
@@ -37,4 +49,48 @@
   top: 0;
   left: 0;
   border-radius: 3px;
+  z-index: 12;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+.zero-first,
+.zero-second {
+  /* background-color: #fff; */
+  position: absolute;
+  top: 0;
+  left: 17px;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 24px solid #fff;
+  z-index: 9;
+  box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+}
+.zero-second {
+  left: 100px;
+  z-index: 6;
+}
+
+.big-text,
+.small-text {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  z-index: 20;
+  color: #fff;
+}
+
+.big-text {
+  font-size: 82px;
+  line-height: 60px;
+  margin-top: 6px;
+}
+.small-text {
+  letter-spacing: 0.04em;
+  font-size: 23px;
+  line-height: 20px;
 }
