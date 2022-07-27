@@ -15,20 +15,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* background-color: red; */
 }
 
 :root {
   --line-height: 8px;
   --line-space: 14px;
   --menu-height: 3 * var(--line-height) + 2 * var(--line-space);
+  --time-first-stage: 0.3s;
 }
 
 .menu {
   width: 80px;
   z-index: 10;
   height: var(--menu-height);
-  /* background-color: red; */
   cursor: pointer;
 }
 
@@ -40,6 +39,117 @@
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-.line-white + .number2 {
+.number1 {
+  transform: translateY(0) rotateZ(0);
+  animation-name: first-line-exit;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.6s;
+}
+
+@keyframes first-line-exit {
+  from {
+    transform: translateY(22px) rotateZ(-45deg);
+  }
+
+  40% {
+    transform: translateY(22px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(22px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+}
+
+.number3 {
+  transform: translateY(0) rotateZ(0);
+  animation-name: third-line-exit;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.6s;
+}
+
+@keyframes third-line-exit {
+  from {
+    transform: translateY(-22px) rotateZ(45deg);
+  }
+
+  40% {
+    transform: translateY(-22px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(-22px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+}
+
+.number2 {
   margin: var(--line-space) 0;
+  opacity: 1;
+  transition: opacity 0.6s;
+}
+
+#modeCheckBox:checked ~ .frame .menu .number1 {
+  transform: translateY(22px) rotateZ(-45deg);
+  animation-name: first-line-enter;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.6s;
+}
+
+@keyframes first-line-enter {
+  from {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(22px) rotateZ(0deg);
+  }
+
+  60% {
+    transform: translateY(22px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translateY(22px) rotateZ(-45deg);
+  }
+}
+
+#modeCheckBox:checked ~ .frame .menu .number2 {
+  opacity: 0;
+  transition: opacity var(--time-first-stage);
+}
+
+#modeCheckBox:checked ~ .frame .menu .number3 {
+  transform: translateY(-22px) rotateZ(45deg);
+  animation-name: third-line-enter;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.6s;
+}
+
+@keyframes third-line-enter {
+  from {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(-22px) rotateZ(0deg);
+  }
+
+  60% {
+    transform: translateY(-22px) rotateZ(0deg);
+  }
+
+  to {
+    transform: translateY(-22px) rotateZ(45deg);
+  }
+}
+
+#modeCheckBox {
+  display: none;
 }
