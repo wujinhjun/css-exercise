@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #42a7a1;
+  width: 400px;
+  height: 400px;
+  box-shadow: 1px 2px 10px 0px, rgba(0, 0, 0, 0.3);
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #fff;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 220px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+.relative-center {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background: #f1ba64;
+  color: #fff;
+}
+
+.header > .title {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header > .date {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.header > .type {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.header > .money {
+  position: absolute;
+  top: 28px;
+  right: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.props {
+  text-align: right;
+  padding: 10px 0 14px 0;
+}
+
+.props > span {
+  position: relative;
+  font-size: 9px;
+  color: #606060;
+  line-height: 13px;
+  padding: 0 10px 0 25px;
+}
+
+.props > span::before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  display: block;
+  content: "";
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.props > .views::before {
+  background: #fa7373;
+}
+
+.props > .purchases::before {
+  background: #7ba2ff;
+}
+
+.canvas-this {
+  position: relative;
+  height: 81px;
+  width: 260px;
+  margin: 0 auto;
+  /* background: red; */
+}
+
+.canvas-this > .line {
+  background: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #f2f2f2;
+}
+
+.canvas-this > .num2 {
+  top: 40px;
+}
+
+.canvas-this > .num3 {
+  top: 80px;
+}
