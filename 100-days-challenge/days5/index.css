@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
 
+:root {
+  --color-red: #fa7373;
+}
+
 .frame {
   position: absolute;
   top: 50%;
@@ -96,7 +100,7 @@
 }
 
 .props > .views::before {
-  background: #fa7373;
+  background: var(--color-red);
 }
 
 .props > .purchases::before {
@@ -127,4 +131,115 @@
 
 .canvas-this > .num3 {
   top: 80px;
+}
+
+.data > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+  left: 7px;
+  top: 43px;
+}
+
+.tips {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translate3d(-50%, 10px, 0);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+  color: #fff;
+  padding: 8px 6px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+  background: var(--color-red);
+}
+
+.tips::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 6px;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  bottom: -3px;
+  transform: rotate(45deg);
+  background: var(--color-red);
+}
+
+.upper > svg > polyline {
+  stroke: var(--color-red);
+}
+
+.upper .point {
+  background: var(--color-red);
+}
+
+.point:hover .tips {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.upper .tips {
+  background: var(--color-red);
+}
+
+.upper .tips::after {
+  background: var(--color-red);
+}
+
+.upper .num1 {
+  left: 7px;
+  top: 43px;
+}
+
+.upper .num2 {
+  left: 48px;
+  top: 9px;
+}
+
+.upper .num3 {
+  left: 88px;
+  top: 20px;
+}
+
+.upper .num4 {
+  left: 128px;
+  top: 8px;
+}
+
+.upper .num5 {
+  left: 169px;
+  top: 35px;
+}
+
+.upper .num6 {
+  left: 209px;
+  top: 45px;
+}
+
+.upper .num7 {
+  left: 249px;
+  top: 16px;
 }
