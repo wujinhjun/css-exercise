@@ -2,6 +2,7 @@
 
 :root {
   --color-red: #fa7373;
+  --color-blue: #7ba2ff;
 }
 
 .frame {
@@ -171,7 +172,7 @@ polyline {
   border-radius: 3px;
   opacity: 0;
   transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
-  background: var(--color-red);
+  /* background: var(--color-red); */
 }
 
 .tips::after {
@@ -184,7 +185,7 @@ polyline {
   margin-left: -3px;
   bottom: -3px;
   transform: rotate(45deg);
-  background: var(--color-red);
+  /* background: var(--color-red); */
 }
 
 .upper > svg > polyline {
@@ -242,4 +243,72 @@ polyline {
 .upper .num7 {
   left: 249px;
   top: 16px;
+}
+
+.lower > svg > polyline {
+  stroke: var(--color-blue);
+}
+
+.lower .point {
+  background: var(--color-blue);
+}
+
+.lower .tips {
+  background: var(--color-blue);
+}
+
+.lower .tips::after {
+  background: var(--color-blue);
+}
+
+.lower .num1 {
+  left: 7px;
+  top: 58px;
+}
+
+.lower .num2 {
+  left: 48px;
+  top: 47px;
+}
+
+.lower .num3 {
+  left: 88px;
+  top: 62px;
+}
+
+.lower .num4 {
+  left: 128px;
+  top: 52px;
+}
+
+.lower .num5 {
+  left: 169px;
+  top: 58px;
+}
+
+.lower .num6 {
+  left: 209px;
+  top: 71px;
+}
+
+.lower .num7 {
+  left: 249px;
+  top: 61px;
+}
+
+.timeline {
+  width: 280px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.day {
+  display: block;
+  float: left;
+  width: 40px;
+  font-size: 9px;
+  color: #949494;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
 }
