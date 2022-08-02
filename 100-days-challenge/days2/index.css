@@ -92,7 +92,7 @@
 .number2 {
   margin: var(--line-space) 0;
   opacity: 1;
-  transition: opacity 0.6s;
+  transition: opacity 1s;
 }
 
 #modeCheckBox:checked ~ .frame .menu .number1 {
